@@ -1,4 +1,3 @@
-
 /* General */
 body, h1, h2, p, select, button {
   margin: 0;
@@ -15,8 +14,8 @@ body {
   color: #333;
   line-height: 1.6;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido y el footer estén bien posicionados */
   min-height: 100vh;
   margin: 0;
 }
@@ -28,6 +27,16 @@ main {
   padding: 20px 40px;
   max-width: 600px;
   width: 100%;
+  margin: 20px auto; /* Centra el main en la página */
+  flex: 1; /* Hace que el main crezca para ocupar el espacio disponible */
+}
+
+/* Logo */
+#logo {
+  max-width: 200px;  /* Ajusta el tamaño máximo del logo */
+  width: 100%;
+  display: block;
+  margin: 0 auto 20px;  /* Centra el logo y agrega espacio abajo */
 }
 
 /* Encabezados */
@@ -104,6 +113,48 @@ p {
   color: #888;
   text-align: center;
   margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.5rem; /* Tamaño del ícono */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #35c9ab; /* Cambia el color al pasar el ratón */
+}
+
+.social-icon {
+  display: inline-block;
+}
+
+.social-links a i {
+  font-size: 2rem; /* Ajusta el tamaño del ícono */
+}
+
+.social-links a:hover i {
+  color: #35c9ab;
 }
 
 /* Adaptabilidad */
