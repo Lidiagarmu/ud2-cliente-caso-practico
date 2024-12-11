@@ -1,34 +1,42 @@
 
-//funcion que se va a lanzar cuando hagamos click en Enviar menú
-
 //Seleccionamos el boton Enviar
 const buttonEnviar = document.querySelector("#enviar");
 console.log("buttom enviarr", buttonEnviar);
 
-//funcion handleClick
+
+/**
+ * Función que se ejecuta cuando se hace clic en el botón "Enviar Menú".
+ * Esta función valida los campos del formulario y actualiza el contenido
+ * de la página con la selección de menú del usuario.
+ * 
+ * @param {Event} event - El evento de clic en el  botón
+ * @returns {void} 
+ * @author Lidia García Muñoz
+ */
+
 const handleClick = (event) => {
 
-    //1 - evita la recarga o render de la pagina 
-    event.preventDefault();
+    
+    event.preventDefault(); //evita la recarga o render de la pagina 
    
-    //2 - seleccionamos los selects para ver su valor
+    // selección  de valores de los campos del formulario
     const primerPlatoSeleccionado = document.querySelector("#primer-plato").value;
     const segundoPlatoSeleccionado = document.querySelector("#segundo-plato").value;
     const postreSeleccionado = document.querySelector("#postre").value;
    
 
-    // 3 - verificamos que los selects tengan valor, es decir, que el usuario haya seleccionado todas las opciones
+    // verifica si todos los campos están seleccionados
     if(!primerPlatoSeleccionado || !segundoPlatoSeleccionado || !postreSeleccionado) {
         alert('Por favor, todos los campos son obligatorios');
-        return; //salimos si alguna selección está vacía
+        return; // detiene la ejecución si alguna opción no está seleccionada
     }
 
 
-    // 4.1 - seleccionamos el main entero y lo vaciamos
+    // actualiza el contenido de la página vaciando el main
     const main = document.querySelector("main");
     main.innerHTML= "";
 
-    // 4.2 - creamos el contenido que queremos mostrar despueés de la selección de menú
+    // añade el nuevo contenido con las opciones seleccionadas por el usuario
     main.innerHTML= `  
         <div>
                <img src="/lidia's_restaurant_app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
@@ -49,14 +57,20 @@ const handleClick = (event) => {
         </div>`;
 
 
-        // 5 - seleccionamos boton Volver. Y cuando hagamos clic sobre el:
-
+       
+        /**
+        * Función que se ejecuta cuando el usuario hace clic en el botón "Volver".
+        * Vuelve a cargar el formulario original para que el usuario pueda hacer 
+        * una nueva selección.
+        * 
+        * @returns {void}
+        * @author Lidia Garcia Muñoz
+         */
         const volverButton = document.querySelector ("#back");
-
         volverButton.addEventListener("click", () => {
-            main.innerHTML = ""; // Limpiar el contenido de main
+            main.innerHTML = ""; // Limpia el contenido del main
         
-             // 5.2 volvemos a insertar el formulario original
+             // vuelve al formulario original
              main.innerHTML = `
                 <img src="/lidia's_restaurant_app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
                 <h1>ELIJA SU MENÚ</h1>
@@ -106,9 +120,9 @@ const handleClick = (event) => {
                   </form>
 
             `;
-// Volver a asociar el event listener al botón "Enviar" después de actualizar el HTML
-const buttonEnviar = document.querySelector("#enviar");
-buttonEnviar.addEventListener("click", (event) => handleClick(event));
+            // reasocia el evento de clic al botón "Enviar"
+            const buttonEnviar = document.querySelector("#enviar");
+            buttonEnviar.addEventListener("click", (event) => handleClick(event));
 
 
         }) ;
