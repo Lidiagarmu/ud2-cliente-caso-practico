@@ -31,7 +31,7 @@ const handleClick = (event) => {
     // 4.2 - creamos el contenido que queremos mostrar despueés de la selección de menú
     main.innerHTML= `  
         <div>
-               <img src="/restaurante app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
+               <img src="/lidia's_restaurant_app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
                 <div id="info">
                     <h2>Menú Seleccionado</h2>
                     <p>Gracias por elegir tu menú. Aquí están tus opciones:</p>
@@ -58,7 +58,7 @@ const handleClick = (event) => {
         
              // 5.2 volvemos a insertar el formulario original
              main.innerHTML = `
-                <img src="/restaurante app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
+                <img src="/lidia's_restaurant_app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
                 <h1>ELIJA SU MENÚ</h1>
                 
                 <form id="menu-form">
