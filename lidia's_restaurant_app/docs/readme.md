@@ -1,45 +1,45 @@
-## Table of Contents
+## Contenidos
 
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Project Structure](#structure)
+1.  [Info General](#general-info)
+2.  [Tecnologias](#tecnologias)
+3.  [Instalacion](#instalacion)
+4.  [Uso](#uso)
+5.  [Estructura del proyecto](#estructura)
 
 ### General Info
 
 ---
 
-Lidia's Restaurant es una aplicación web sencilla que permite a los usuarios seleccionar un menú compuesto por un primer plato, un segundo plato y un postre. Una vez completada la selección, la aplicación muestra el menú elegido y ofrece la opción de volver al formulario para realizar una nueva selección.
+Lidia's Restaurant es una aplicación web sencilla que permite a los usuarios seleccionar un menú compuesto
+por un primer plato, un segundo plato y un postre. Una vez completada la selección, la aplicación muestra el menú elegido
+y ofrece la opción de volver al formulario para realizar una nueva selección.
 
-## Technologies
-
----
-
-A list of technologies used within the project:
-
-- [HTML](https://example.com): Version 12.3
-- [CSS](https://example.com): Version 2.34
-- [JavaScript](https://example.com): Version 1234
-- [Font Awesome](https://example.com): Version 1234
-
-## Installation
+## Tecnologias
 
 ---
 
-# Clone the repository
+- [HTML]: Version html5
+- [CSS]: Version css3
+- [JavaScript]: ecmas6
+- [Font Awesome]: libreria de iconos
+
+## Instalacion
+
+---
+
+# Clona el repositorio
 
 git clone https://github.com/Lidiagarmu/lidias-restaurant-app.git
 
-# Navigate to the project directory
+# Navega al proyecto del directorio
 
 cd lidias-restaurant-app
 
-# Open the index.html file in your browser
+# Abre el archivo index.html en tu carpeta
 
 Puede utilizar un servidor en vivo, como "Live Server" en Visual Studio Code, para realizar pruebas más fácilmente.
 
-# Usage
+# Uso
 
 1. Abre la aplicación web.
    2.Selecciona un primer plato, un segundo plato y un postre del formulario.
@@ -47,7 +47,7 @@ Puede utilizar un servidor en vivo, como "Live Server" en Visual Studio Code, pa
    4.Revisa el menú seleccionado mostrado en pantalla.
    5.Si deseas realizar otra selección, haz clic en el botón Volver y repite el proceso.
 
-# Structure
+# Estructur
 
 |-- lidias-restaurant-app
 |--docs
