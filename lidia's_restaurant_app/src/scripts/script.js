@@ -13,24 +13,19 @@ console.log("buttom enviarr", buttonEnviar);
  * @returns {void} 
  * @author Lidia García Muñoz
  */
-
 const handleClick = (event) => {
-
-    
     event.preventDefault(); //evita la recarga o render de la pagina 
    
     // selección  de valores de los campos del formulario
     const primerPlatoSeleccionado = document.querySelector("#primer-plato").value;
     const segundoPlatoSeleccionado = document.querySelector("#segundo-plato").value;
     const postreSeleccionado = document.querySelector("#postre").value;
-   
 
     // verifica si todos los campos están seleccionados
     if(!primerPlatoSeleccionado || !segundoPlatoSeleccionado || !postreSeleccionado) {
         alert('Por favor, todos los campos son obligatorios');
         return; // detiene la ejecución si alguna opción no está seleccionada
     }
-
 
     // actualiza el contenido de la página vaciando el main
     const main = document.querySelector("main");
@@ -69,7 +64,6 @@ const handleClick = (event) => {
         const volverButton = document.querySelector ("#back");
         volverButton.addEventListener("click", () => {
             main.innerHTML = ""; // Limpia el contenido del main
-        
              // vuelve al formulario original
              main.innerHTML = `
                 <img src="/lidia's_restaurant_app/resources/images/logo.png" alt="Logo de Lidia's Restaurant" id="logo">
@@ -88,7 +82,6 @@ const handleClick = (event) => {
                             </select>
                         </section>
                     </div>
-
                     <div>
                         <section>
                             <h2>Segundo Plato</h2>
@@ -100,7 +93,6 @@ const handleClick = (event) => {
                             </select>
                         </section>
                         </div>
-
                         <div>
                         <section>
                             <h2>Postre</h2>
@@ -113,13 +105,12 @@ const handleClick = (event) => {
                         </section>
                         </div>
 
-
-                <p>Incluye: Pan y primera consumición.</p>
-                 <button type="submit" id="enviar">Enviar Menú</button>
+                        <p>Incluye: Pan y primera consumición.</p>
+                        <button type="submit" id="enviar">Enviar Menú</button>
 
                   </form>
-
             `;
+            
             // reasocia el evento de clic al botón "Enviar"
             const buttonEnviar = document.querySelector("#enviar");
             buttonEnviar.addEventListener("click", (event) => handleClick(event));
